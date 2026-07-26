@@ -1,0 +1,107 @@
+<!-- Author Profile Widget -->
+<div class="glass-panel author-card">
+
+    <div class="avatar-wrapper">
+        <div class="avatar-img">
+            <i class="fa-solid fa-user-gear"></i>
+        </div>
+        <div class="avatar-ring"></div>
+    </div>
+
+    <div>
+        <h3 class="author-name">{{ site.author }}</h3>
+        <p class="author-title">AI Research & Systems Engineer</p>
+        <p class="author-bio">
+            Exploring state space models, LLM acceleration, agentic workflows, and neural control systems.
+        </p>
+    </div>
+
+    <div class="social-links">
+        <a href="https://github.com/{{ site.github_username }}" target="_blank" class="social-btn" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" class="social-btn" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" class="social-btn" aria-label="Twitter">
+            <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a href="mailto:{{ site.email }}" class="social-btn" aria-label="Email">
+            <i class="fa-solid fa-envelope"></i>
+        </a>
+    </div>
+
+</div>
+
+<!-- System Specifications Widget -->
+<div class="glass-panel widget-card">
+
+    <h4 class="widget-title">
+        <i class="fa-solid fa-terminal"></i> Lab Architecture Specs
+    </h4>
+
+    <div class="spec-list">
+
+        <div class="spec-item">
+            <span class="spec-label"><i class="fa-solid fa-microchip"></i> Primary Engine</span>
+            <span class="spec-val">Jekyll / Kramdown</span>
+        </div>
+
+        <div class="spec-item">
+            <span class="spec-label"><i class="fa-solid fa-square-root-variable"></i> TeX Engine</span>
+            <span class="spec-val">MathJax 3.0</span>
+        </div>
+
+        <div class="spec-item">
+            <span class="spec-label"><i class="fa-solid fa-palette"></i> Aesthetic</span>
+            <span class="spec-val">Dark Neon Glass</span>
+        </div>
+
+        <div class="spec-item">
+            <span class="spec-label"><i class="fa-solid fa-code"></i> Code Highlight</span>
+            <span class="spec-val">Rouge / JetBrains</span>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Quick Tag Cloud Widget -->
+<div class="glass-panel widget-card">
+
+    <h4 class="widget-title">
+        <i class="fa-solid fa-tags"></i> Research Topics
+    </h4>
+
+    <div class="tags-cloud">
+        <span class="tag-cloud-item">#Transformers</span>
+        <span class="tag-cloud-item">#LLMs</span>
+        <span class="tag-cloud-item">#RAG</span>
+        <span class="tag-cloud-item">#Agents</span>
+        <span class="tag-cloud-item">#VectorDB</span>
+        <span class="tag-cloud-item">#MathJax</span>
+        <span class="tag-cloud-item">#ReinforcementLearning</span>
+        <span class="tag-cloud-item">#GraphRAG</span>
+        <span class="tag-cloud-item">#SpeculativeDecoding</span>
+        <span class="tag-cloud-item">#FineTuning</span>
+    </div>
+
+</div>
+
+<!-- Newsletter Card -->
+<div class="newsletter-card">
+
+    <h4 class="newsletter-title">
+        <i class="fa-solid fa-paper-plane" style="color: var(--accent-cyan);"></i> Research Dispatch
+    </h4>
+
+    <p class="newsletter-desc">
+        Subscribe to receive new AI paper teardowns, code implementations, and experiment benchmarks directly to your inbox.
+    </p>
+
+    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed to Neural Navigator Dispatches!');">
+        <input type="email" class="newsletter-input" placeholder="Enter your email..." required>
+        <button type="submit" class="newsletter-btn">Subscribe</button>
+    </form>
+
+</div>

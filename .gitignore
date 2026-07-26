@@ -1,1 +1,8 @@
-﻿_site
+_site/
+.bundle/
+vendor/
+.jekyll-cache/
+.sass-cache/
+__pycache__/
+*.log
+.DS_Store

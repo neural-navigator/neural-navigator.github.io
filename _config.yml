@@ -1,42 +1,35 @@
-title: "My Blogs Name"
-author: "Default Author Name"
-description: "Some short description of your blog can go here." # This will show up in places like twitter, linkedin, etc, if you share your sites url as a post.
+title: Neural Navigator Lab
 
-# Email / Social media user names used by the minima theme:
-# All of these are optional and can be removed or commented out
-email: "example@mail.com"
-twitter_username: "twitteruser"
-github_username: "githubuser"
-linkedin_username: "linkedinuser"
-#facebook_username: username
-#flickr_username: username
-#instagram_username: username
-#pinterest_username: username
-#youtube_username: username
-#googleplus_username: +username
+author: Satya Pati
 
-#########################################################################################
-######### Nothing below needs to be changed (unless you know what you're doing) #########
-#########################################################################################
-theme: "minima"
+description: >
+  Research notes, engineering insights, and experiments in Artificial Intelligence.
 
-rss: rss
+email: iamsatyapati@gmail.com
 
-kramdown:
-  syntax_highlighter_opts:
-    disable: true
-    
+github_username: Neural-Navigator
+
+linkedin_username: iamsatyapati
+
+twitter_username: i_satyapati
+
 plugins:
   - jekyll-feed
   - jekyll-sitemap
 
-titles_from_headings:
-  strip_title: true
-  collections: true
+markdown: kramdown
+
+highlighter: rouge
+
+permalink: /:categories/:title/
+
+collections:
+  research:
+    output: true
 
 defaults:
   - scope:
       path: ""
-      type: post
+      type: posts
     values:
-      tags: Other
+      layout: post

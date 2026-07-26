@@ -1,0 +1,84 @@
+<div class="section-header">
+    <h2 class="section-title">
+        <i class="fa-solid fa-star"></i> Featured Research Spotlight
+    </h2>
+</div>
+
+{% assign featured_post = site.posts | first %}
+{% if featured_post %}
+<article class="featured-card">
+    <div class="featured-badge">
+        <i class="fa-solid fa-bolt"></i> Spotlight Note
+    </div>
+
+    <h3 class="featured-title">
+        <a href="{{ featured_post.url }}">{{ featured_post.title }}</a>
+    </h3>
+
+    <p class="featured-excerpt">
+        {{ featured_post.subtitle | default: featured_post.excerpt | strip_html | truncatewords: 35 }}
+    </p>
+
+    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        {% for tag in featured_post.tags %}
+        <span class="tag-pill">#{{ tag }}</span>
+        {% endfor %}
+    </div>
+
+    <div class="featured-meta">
+        <div class="meta-author">
+            <div class="meta-avatar">
+                <i class="fa-solid fa-brain"></i>
+            </div>
+            <span>{{ site.author }}</span>
+        </div>
+
+        <div class="meta-details">
+            <span><i class="fa-regular fa-calendar"></i> {{ featured_post.date | date: "%B %d, %Y" }}</span>
+            {% if featured_post.read_time %}
+            <span><i class="fa-regular fa-clock"></i> {{ featured_post.read_time }}</span>
+            {% endif %}
+            <a href="{{ featured_post.url }}" class="read-more-link">
+                Read Full Paper <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</article>
+{% else %}
+<article class="featured-card">
+    <div class="featured-badge">
+        <i class="fa-solid fa-bolt"></i> Spotlight Note
+    </div>
+
+    <h3 class="featured-title">
+        <a href="/llms/speculative-decoding-architectures/">Speculative Decoding & Key-Value Cache Optimizations in LLMs</a>
+    </h3>
+
+    <p class="featured-excerpt">
+        An in-depth mathematical breakdown of speculative sampling algorithms for accelerating inference in auto-regressive transformer models without sacrificing accuracy.
+    </p>
+
+    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <span class="tag-pill">#LLMs</span>
+        <span class="tag-pill">#Inference</span>
+        <span class="tag-pill">#Optimization</span>
+    </div>
+
+    <div class="featured-meta">
+        <div class="meta-author">
+            <div class="meta-avatar">
+                <i class="fa-solid fa-brain"></i>
+            </div>
+            <span>{{ site.author }}</span>
+        </div>
+
+        <div class="meta-details">
+            <span><i class="fa-regular fa-calendar"></i> July 2026</span>
+            <span><i class="fa-regular fa-clock"></i> 8 min read</span>
+            <a href="/llms/speculative-decoding-architectures/" class="read-more-link">
+                Read Full Paper <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</article>
+{% endif %}
